@@ -610,7 +610,7 @@
     <link
       rel="stylesheet"
       id="e-swiper-css"
-      href="{% static 'css/conditionals/e-swiper.min.css@ver=3.24.5.css' %}"
+      href="{% static 'css/e-swiper.min.css@ver=3.24.5.css' %}"
       media="all"
     />
     <link
@@ -658,7 +658,7 @@
     <link
       rel="stylesheet"
       id="pDate-style-css"
-      href="{% static 'css/assets/css/persian-datepicker.min.css@ver=6.7.1.css' %}"
+      href="{% static 'css/persian-datepicker.min.css@ver=6.7.1.css' %}"
       media="all"
     />
     <link
@@ -669,23 +669,23 @@
     />
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
     <script
-      src="wp-content/plugins/revslider/public/js/libs/tptools.js@ver=6.7.20"
+      src="{% static 'js/tptools.js@ver=6.7.20' %}"
       id="tp-tools-js"
       async
       data-wp-strategy="async"
     ></script>
     <script
-      src="wp-content/plugins/revslider/public/js/sr7.js@ver=6.7.20"
+      src="{% static 'js/sr7.js@ver=6.7.20' %}"
       id="sr7-js"
       async
       data-wp-strategy="async"
     ></script>
     <script
-      src="wp-includes/js/jquery/jquery.min.js@ver=3.7.1"
+      src="{% static 'js/jquery.min.js@ver=3.7.1' %}"
       id="jquery-core-js"
     ></script>
     <script
-      src="wp-includes/js/jquery/jquery-migrate.min.js@ver=3.4.1"
+      ssrc="{% static 'js/jquery-migrate.min.js@ver=3.4.1' %}"
       id="jquery-migrate-js"
     ></script>
     <link rel="https://api.w.org/" href="wp-json/index.html" />
@@ -757,21 +757,21 @@
     />
     <link
       rel="icon"
-      href="wp-content/uploads/2024/12/cropped-ICON-WEBSITE-32x32.png"
+      href="{% static 'images/cropped-ICON-WEBSITE-32x32.png' %}"
       sizes="32x32"
     />
     <link
       rel="icon"
-      href="wp-content/uploads/2024/12/cropped-ICON-WEBSITE-192x192.png"
+      href="{% static 'images/cropped-ICON-WEBSITE-192x192.png' %}"
       sizes="192x192"
     />
     <link
       rel="apple-touch-icon"
-      href="wp-content/uploads/2024/12/cropped-ICON-WEBSITE-180x180.png"
+      href="{% static 'images/cropped-ICON-WEBSITE-180x180.png' %}"
     />
     <meta
       name="msapplication-TileImage"
-      content="http://fardadarchitects.com/wp-content/uploads/2024/12/cropped-ICON-WEBSITE-270x270.png"
+      content="{% static 'images/cropped-ICON-WEBSITE-270x270.png' %}"
     />
     <script>
       window._tpt ??= {};
@@ -1741,7 +1741,7 @@
                     fetchpriority="high"
                     width="1080"
                     height="309"
-                    src="wp-content/uploads/2024/10/fardad-logo-minimal.svg"
+                    src="{% static 'images/fardad-logo-minimal.svg' %}"
                     class="attachment-full size-full wp-image-679"
                     alt=""
                   />
@@ -1783,7 +1783,7 @@
                 >
                   <video
                     class="elementor-video"
-                    src="wp-content/uploads/2024/11/safhe-aval-3.mp4"
+                    src="{% static 'video/safhe-aval-3.mp4' %}"
                     autoplay=""
                     muted="muted"
                     controlsList="nodownload"
@@ -1809,7 +1809,7 @@
                     decoding="async"
                     width="707"
                     height="337"
-                    src="wp-content/uploads/2024/11/sefid.jpg"
+                    src="{% static 'images/sefid.jpg' %}"
                     class="attachment-large size-large wp-image-1386"
                     alt=""
                   />
@@ -1833,7 +1833,7 @@
                             decoding="async"
                             width="150"
                             height="43"
-                            src="wp-content/uploads/2024/10/fardad-logo-minimal-1.svg"
+                            src="{% static 'images/fardad-logo-minimal-1.svg' %}"
                             class="attachment-thumbnail size-thumbnail"
                             alt=""
                           />
@@ -1862,7 +1862,7 @@
                   decoding="async"
                   width="452"
                   height="130"
-                  src="wp-content/uploads/2024/11/select-enter-too-see-projects.jpg"
+                  src="{% static 'images/elect-enter-too-see-projects.jpg' %}"
                   class="attachment-full size-full wp-image-1352"
                   alt=""
                 />
@@ -1893,7 +1893,7 @@
                         decoding="async"
                         width="127"
                         height="44"
-                        src="wp-content/uploads/2024/11/enter.jpg"
+                        src="{% static 'images/enter.jpg' %}"
                         class="attachment-full size-full wp-image-1418"
                         alt=""
                       />
@@ -1936,43 +1936,40 @@
       });
     </script>
     <script
-      src="{% static 'css/assets/js/hello-frontend.min.js@ver=3.1.1"
+      src="{% static 'js/hello-frontend.min.js@ver=3.1.1' %}"
       id="hello-theme-frontend-js"
     ></script>
     <script
-      src="wp-content/plugins/elementor-pro/assets/lib/smartmenus/jquery.smartmenus.min.js@ver=1.2.1"
+      src="{% static 'js/jquery.smartmenus.min.js@ver=1.2.1' %}"
       id="smartmenus-js"
     ></script>
+    <script src="{% static 'js/persian-date.min.js' %}" id="pDate-js"></script>
     <script
-      src="{% static 'css/assets/js/persian-date.min.js"
-      id="pDate-js"
-    ></script>
-    <script
-      src="{% static 'css/assets/js/persian-datepicker.min.js"
+      src="{% static 'js/persian-datepicker.min.js' %}"
       id="pDatepicker-js"
     ></script>
     <script
-      src="{% static 'css/assets/js/persian-datepicker-loader.js"
+      src="{% static 'js/persian-datepicker-loader.js' %}"
       id="pDatepickerLoader-js"
     ></script>
     <script
-      src="wp-content/plugins/elementor-pro/assets/js/webpack-pro.runtime.min.js@ver=3.24.2"
+      src="{% static 'js/webpack-pro.runtime.min.js@ver=3.24.2' %}"
       id="elementor-pro-webpack-runtime-js"
     ></script>
     <script
-      src="wp-content/plugins/elementor/assets/js/webpack.runtime.min.js@ver=3.24.5"
+      src="{% static 'js/webpack.runtime.min.js@ver=3.24.5' %}"
       id="elementor-webpack-runtime-js"
     ></script>
     <script
-      src="wp-content/plugins/elementor/assets/js/frontend-modules.min.js@ver=3.24.5"
+      src="{% static 'js/frontend-modules.min.js@ver=3.24.5' %}"
       id="elementor-frontend-modules-js"
     ></script>
     <script
-      src="wp-includes/js/dist/hooks.min.js@ver=4d63a3d491d11ffd8ac6"
+      src="{% static 'js/hooks.min.js@ver=4d63a3d491d11ffd8ac6' %}"
       id="wp-hooks-js"
     ></script>
     <script
-      src="wp-includes/js/dist/i18n.min.js@ver=5e580eb46a90c2b997e6"
+      src="{% static 'js/i18n.min.js@ver=5e580eb46a90c2b997e6' %}"
       id="wp-i18n-js"
     ></script>
     <script id="wp-i18n-js-after">
@@ -2018,11 +2015,11 @@
       };
     </script>
     <script
-      src="wp-content/plugins/elementor-pro/assets/js/frontend.min.js@ver=3.24.2"
+      src="{% static 'js/frontend.min.js@ver=3.24.2' %}"
       id="elementor-pro-frontend-js"
     ></script>
     <script
-      src="wp-includes/js/jquery/ui/core.min.js@ver=1.13.3"
+      src="{% static 'js/core.min.js@ver=1.13.3' %}"
       id="jquery-ui-core-js"
     ></script>
     <script id="elementor-frontend-js-before">
@@ -2170,11 +2167,11 @@
       };
     </script>
     <script
-      src="wp-content/plugins/elementor/assets/js/frontend.min.js@ver=3.24.5"
+      src="{% static 'js/frontend.min.js@ver=3.24.5' %}"
       id="elementor-frontend-js"
     ></script>
     <script
-      src="wp-content/plugins/elementor-pro/assets/js/elements-handlers.min.js@ver=3.24.2"
+      src="{% static 'js/elements-handlers.min.js@ver=3.24.2' %}"
       id="pro-elements-handlers-js"
     ></script>
   </body>
