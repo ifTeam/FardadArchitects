@@ -1,6 +1,4 @@
 from django.shortcuts import render
 
-from django.http import HttpResponse
-
 def home(request):
-    return HttpResponse("Welcome to my default page!")
+    return render(request, 'home.html')  # No need for app-specific subfolders
