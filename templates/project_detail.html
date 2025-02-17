@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ project.name }}</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+</head>
+<body>
+
+{% include 'base/header.html' %}
+
+<div class="project-detail">
+    <h1>{{ project.name }}</h1>
+    <p>Year: {{ project.year }}</p>
+    <img src="{% static project.image %}" alt="{{ project.name }}">
+</div>
+
+</body>
+</html>

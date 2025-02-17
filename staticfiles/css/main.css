@@ -1,0 +1,187 @@
+/* css reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* End of reset.css */
+
+.nav-container{
+	position: fixed;
+    left: 0;
+    top: 0;
+    width: 10%;
+    height: 100%;
+    z-index: 3;
+    background: none; /* No background */
+    display: fix;
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+}
+
+#main-menu {
+    position: fixed;
+    left: 0;
+    top: 15%;
+    width: 10%;
+    height: 60%;
+    z-index: 3;
+    background: none; /* No background */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#main-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-around;
+}
+
+#main-menu li {
+    flex: 1;
+    display: flex;
+    /* padding: 40% 0; */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transform: rotate(-90deg); /* Rotate the text */
+}
+
+#main-menu a {
+    display: block;
+    padding: 5% 0;
+	left:100px;
+    text-decoration: none;
+    color: black;
+    border-bottom: none; /* Remove default underline */
+}
+
+#main-menu a:hover {
+    border-bottom: 3px solid black; /* Thin line under items on hover */
+}
+
+
+#brand-logo {
+    width: 100%;
+    text-align: center;
+}
+
+#brand-logo img {
+    max-width: 100%;
+    height: auto;}
+
+video {
+        width: 100%;  /* Full window height */
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        z-index: -1; /* Sends the video to the background */
+
+    }
+body {
+height: 4000px;
+}
+
+/* Static/css/main.css */
+.gallery-item {
+    padding: 15px;
+    overflow: hidden;
+}
+
+.image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    height: 400px; /* Adjust as needed */
+}
+
+.project-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    opacity: 1;
+    transition: background 0.3s ease;
+}
+
+.project-title {
+    font-size: 2em;
+    margin-bottom: 0.5rem;
+}
+
+.project-date {
+    font-size: 1.2em;
+}
+
+/* Hover Effects */
+.gallery-item:hover .project-image {
+    transform: scale(1.1);
+}
+
+.gallery-item:hover .overlay {
+    background: rgba(0, 0, 0, 0.5);
+}
