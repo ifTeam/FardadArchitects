@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fardad Architects</title>
+  <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+  <link rel="stylesheet" href="{% static 'css/main.css' %}">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+  {% include 'base/header.html' %}
+
+  <div class="container">
+    <div class="row">
+        {% for project in projects %}
+        <div class="col-md-4 gallery-item">
+            <a href="#" class="project-link">
+                <div class="image-container">
+                    <img src="{% static project.image %}" alt="{{ project.name }}" class="project-image">
+                    <div class="overlay">
+                        <h3 class="project-title">{{ project.name }}</h3>
+                        <p class="project-date">{{ project.date }}</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+</body>
+</html>
