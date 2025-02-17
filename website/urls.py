@@ -3,5 +3,5 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('MainSite.urls')),  # Set MainSite as the default page
+    path('', include('MainSite.urls')),  # This includes MainSite's URLs
 ]

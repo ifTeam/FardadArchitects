@@ -19,7 +19,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    
+    # Your custom apps
+    'MainSite',  # The app where your main views and templates are located
+    'projects',  # The app for managing projects (gallery and details)
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
