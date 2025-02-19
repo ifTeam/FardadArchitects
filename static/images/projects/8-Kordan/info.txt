@@ -1,0 +1,7 @@
+Name: Kordan Villa
+Date: 2020
+location: Kordan
+Client: Dr Hamidian
+Constructor: Mohammadmehdi Shahinpey
+Area: 480 sqm
+Complete

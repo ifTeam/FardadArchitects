@@ -1,0 +1,7 @@
+Name: Amerian
+Date: 2019
+location: Shahrood
+Client: Dr Amerian
+Constructor: Morteza Abolhasan
+Area: 3200 sqm
+Completed
