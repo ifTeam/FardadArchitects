@@ -4,18 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ project.name }}</title>
+    <title>{{ project.name }} - Fardad Architects</title>
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
 </head>
 <body>
 
-{% include 'base/header.html' %}
+    {% include 'base/header.html' %}
 
-<div class="project-detail">
-    <h1>{{ project.name }}</h1>
-    <p>Year: {{ project.year }}</p>
-    <img src="{% static project.image %}" alt="{{ project.name }}">
-</div>
+    <div class="container mt-4">
+        <h1>{{ project.name }}</h1>
+        <p><strong>Date:</strong> {{ project.date }}</p>
+        <p><strong>Location:</strong> {{ project.location }}</p>
+        <p><strong>Client:</strong> {{ project.client }}</p>
+        <p><strong>Constructor:</strong> {{ project.constructor }}</p>
+        <p><strong>Area:</strong> {{ project.area }}</p>
+        <p><strong>Status:</strong> {{ project.status }}</p>
+
+        <h3>Project Images</h3>
+        <div>
+            {% for image in project.slideshow_images %}
+                <img src="{% static image %}" alt="Project Image" style="width: 200px; margin: 5px;">
+            {% endfor %}
+        </div>
+
+    </div>
 
 </body>
 </html>

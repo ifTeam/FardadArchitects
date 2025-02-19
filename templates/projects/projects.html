@@ -17,7 +17,7 @@
     <div class="row">
         {% for project in projects %}
         <div class="col-md-4 gallery-item">
-            <a href="#" class="project-link">
+            <a href="{% url 'project_detail' project.id %}" class="project-link">
                 <div class="image-container">
                     <img src="{% static project.image %}" alt="{{ project.name }}" class="project-image">
                     <div class="overlay">
@@ -27,9 +27,14 @@
                 </div>
             </a>
         </div>
-        {% endfor %}
+    {% endfor %}
+    
     </div>
 </div>
+
+
+
+
 
 </body>
 </html>
