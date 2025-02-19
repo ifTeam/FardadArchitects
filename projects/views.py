@@ -1,6 +1,5 @@
 import os
 from django.conf import settings
-from django.shortcuts import render
 from django.shortcuts import render, get_object_or_404
 
 def read_info_file(info_path):
@@ -49,21 +48,25 @@ def projects_view(request):
 
     return render(request, "projects/projects.html", {"projects": projects})
 
-
 def project_detail_view(request, project_id):
     """ Display a single project's details """
-    project_dir = os.path.join(settings.STATIC_ROOT, "images", "projects", project_id)
+    project_dir = os.path.join(settings.BASE_DIR, "static", "images", "projects", project_id)
     info_path = os.path.join(project_dir, "info.txt")
 
     if not os.path.exists(info_path):
-        return render(request, "404.html")  # Handle missing projects gracefully
+        return render(request, "404.html")  # Error handling
 
-    project_info = read_info_file(info_path)
+    project_info = {}
+    with open(info_path, "r", encoding="utf-8") as file:
+        for line in file:
+            if ":" in line:
+                key, value = line.split(":", 1)
+                project_info[key.strip().lower()] = value.strip()
+            else:
+                project_info["status"] = line.strip()
 
-    # Get all images for the slideshow
     image_files = sorted([
-        f for f in os.listdir(project_dir)
-        if f.endswith((".jpg", ".png")) and f[:2].isdigit()  # Images like 01.jpg, 02.jpg
+        f for f in os.listdir(project_dir) if f.endswith((".jpg", ".png")) and f[:2].isdigit()
     ])
 
     context = {
@@ -76,8 +79,6 @@ def project_detail_view(request, project_id):
             "constructor": project_info.get("constructor", "Unknown"),
             "area": project_info.get("area", "Unknown"),
             "status": project_info.get("status", ""),
-            "day_image": f"images/projects/{project_id}/day.jpg",
-            "night_image": f"images/projects/{project_id}/night.jpg",
             "slideshow_images": [f"images/projects/{project_id}/{img}" for img in image_files],
         }
     }
