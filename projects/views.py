@@ -48,6 +48,8 @@ def projects_view(request):
 
     return render(request, "projects/projects.html", {"projects": projects})
 
+
+
 def project_detail_view(request, project_id):
     """ Display a single project's details """
     project_dir = os.path.join(settings.BASE_DIR, "static", "images", "projects", project_id)
@@ -56,6 +58,7 @@ def project_detail_view(request, project_id):
     if not os.path.exists(info_path):
         return render(request, "404.html")  # Error handling
 
+    # Read info.txt
     project_info = {}
     with open(info_path, "r", encoding="utf-8") as file:
         for line in file:
@@ -64,6 +67,10 @@ def project_detail_view(request, project_id):
                 project_info[key.strip().lower()] = value.strip()
             else:
                 project_info["status"] = line.strip()
+
+    # Check if day.jpg and night.jpg exist
+    day_image = f"images/projects/{project_id}/day.jpg"
+    night_image = f"images/projects/{project_id}/night.jpg"
 
     image_files = sorted([
         f for f in os.listdir(project_dir) if f.endswith((".jpg", ".png")) and f[:2].isdigit()
@@ -79,6 +86,8 @@ def project_detail_view(request, project_id):
             "constructor": project_info.get("constructor", "Unknown"),
             "area": project_info.get("area", "Unknown"),
             "status": project_info.get("status", ""),
+            "day_image": day_image,
+            "night_image": night_image,
             "slideshow_images": [f"images/projects/{project_id}/{img}" for img in image_files],
         }
     }
