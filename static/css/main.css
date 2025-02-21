@@ -222,3 +222,46 @@ height: 4000px;
     margin: auto;       /* Center images */
     object-fit: cover;  /* Ensure images fit properly */
 }
+
+
+/* Contact Page Styles */
+.container {
+    max-width: 900px;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.1rem;
+}
+
+form .form-control {
+    border-radius: 5px;
+    padding: 10px;
+}
+
+button {
+    background-color: #0056b3;
+    color: white;
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #003d80;
+}
+
+/* Map Container */
+.map-container {
+    max-width: 900px;
+    margin: 30px auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}

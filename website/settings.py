@@ -23,6 +23,7 @@ INSTALLED_APPS = [
     # Your custom apps
     'MainSite',  # The app where your main views and templates are located
     'projects',  # The app for managing projects (gallery and details)
+    "contact",  # The app for managing contact form
 ]
 
 
