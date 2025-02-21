@@ -2,653 +2,154 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Fardad Architects</title>
-  <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Fardad Architects</title>
+
+    <!-- Bootstrap & Custom Styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    
+    <style>
+        /* Custom Styles */
+        .about-container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 50px 20px;
+        }
+
+        .founder-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .founder-text {
+            width: 50%;
+            text-align: left;
+        }
+
+        .founder-image {
+            width: 40%;
+        }
+
+        .founder-image img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .horizontal-line {
+            border-top: 2px solid black;
+            margin: 30px 0;
+        }
+
+        .team-section {
+            text-align: center;
+        }
+
+        .team-members {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .team-member {
+            width: 200px;
+            text-align: center;
+        }
+
+        .team-member img {
+            width: 100%;
+            border-radius: 5px;
+        }
+        .team-members .row {
+          justify-content: center;
+          margin-top: 30px;
+      }
+      
+      .team-member img {
+          max-width: 100%;
+          height: auto;
+          border-radius: 5px;
+          margin-bottom: 10px;
+      }
+      
+      h5 {
+          font-size: 18px;
+          margin-top: 10px;
+          font-weight: bold;
+      }
+      
+      .text-muted {
+          font-size: 14px;
+          margin-bottom: 5px;
+      }
+      
+
+    </style>
 </head>
-  <body
-  class="rtl page-template-default page page-id-284 wp-custom-logo elementor-default elementor-kit-35 elementor-page elementor-page-284"
-  >
+<body>
+
+   
   {% include 'base/header.html' %}
 
- 
-    <main
-      id="content"
-      class="site-main post-284 page type-page status-publish hentry"
-    >
-      <div class="page-content">
-        <div
-          data-elementor-type="wp-page"
-          data-elementor-id="284"
-          class="elementor elementor-284"
-          data-elementor-post-type="page"
-        >
-          <div
-            class="elementor-element elementor-element-ef47af7 e-flex e-con-boxed e-con e-parent"
-            data-id="ef47af7"
-            data-element_type="container"
-          >
-            <div class="e-con-inner">
-              <div
-                class="elementor-element elementor-element-ac26b7e e-con-full e-flex e-con e-child"
-                data-id="ac26b7e"
-                data-element_type="container"
-              >
-                <div
-                  class="elementor-element elementor-element-64d0984 elementor-widget elementor-widget-heading"
-                  data-id="64d0984"
-                  data-element_type="widget"
-                  data-widget_type="heading.default"
-                >
-                  <div class="elementor-widget-container">
-                    <h1 class="elementor-heading-title elementor-size-default">
-                      FARDAD GHASEMZADEH
-                    </h1>
-                  </div>
-                </div>
-                <div
-                  class="elementor-element elementor-element-ea50da4 elementor-widget elementor-widget-heading"
-                  data-id="ea50da4"
-                  data-element_type="widget"
-                  data-widget_type="heading.default"
-                >
-                  <div class="elementor-widget-container"></div>
-                </div>
-                <div
-                  class="elementor-element elementor-element-e2e1b2d elementor-widget-divider--view-line elementor-widget elementor-widget-divider"
-                  data-id="e2e1b2d"
-                  data-element_type="widget"
-                  data-widget_type="divider.default"
-                >
-                  <div class="elementor-widget-container">
-                    <div class="elementor-divider">
-                      <span class="elementor-divider-separator"> </span>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="elementor-element elementor-element-fe2383e elementor-widget elementor-widget-text-editor"
-                  data-id="fe2383e"
-                  data-element_type="widget"
-                  data-widget_type="text-editor.default"
-                >
-                  <div class="elementor-widget-container">
-                    <div dir="auto">
-                      Fardad Architects, founded in 2018 by Fardad Ghasemzadeh,
-                      specializes in innovative, functional, and sustainable
-                      architectural solutions. With expertise in Digital
-                      Architecture and cutting-edge design, the studio focuses
-                      on creating aesthetically compelling and highly functional
-                      spaces. Their approach emphasizes shaping environments
-                      that enhance living and working experiences through
-                      attention to detail, client collaboration, and a balance
-                      of creativity, functionality, and sustainability.
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="elementor-element elementor-element-a5fb0d7 e-con-full e-flex e-con e-child"
-                data-id="a5fb0d7"
-                data-element_type="container"
-              >
-                <div
-                  class="elementor-element elementor-element-ea0a496 elementor-widget elementor-widget-gallery"
-                  data-id="ea0a496"
-                  data-element_type="widget"
-                  data-settings='{"columns":1,"columns_tablet":1,"gap":{"unit":"px","size":12,"sizes":[]},"aspect_ratio":"1:1","lazyload":"yes","gallery_layout":"grid","columns_mobile":1,"gap_tablet":{"unit":"px","size":10,"sizes":[]},"gap_mobile":{"unit":"px","size":10,"sizes":[]}}'
-                  data-widget_type="gallery.default"
-                >
-                  <div class="elementor-widget-container">
-                    <div class="elementor-gallery__container">
-                      <div class="e-gallery-item elementor-gallery-item">
-                        <div
-                          class="e-gallery-image elementor-gallery-item__image"
-                          data-thumbnail="{% static 'images/fardad-1080-1080.jpg' %}"
-                          data-width="1080"
-                          data-height="1080"
-                          aria-label=""
-                          role="img"
-                        ></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+    <div class="about-container">
+        <!-- Founder Section -->
+        <div class="founder-section">
+            <div class="founder-text">
+                <h1>FARDAD GHASEMZADEH</h1>
+                <h3 class="text-muted">Founder</h3>
+                <div class="horizontal-line"></div>
+                <p>
+                    Fardad Architects, founded in 2018 by Fardad Ghasemzadeh, specializes in
+                    innovative, functional, and sustainable architectural solutions.
+                    With expertise in Digital Architecture and cutting-edge design, the studio
+                    focuses on creating aesthetically compelling and highly functional spaces.
+                    Their approach emphasizes shaping environments that enhance living and working
+                    experiences through attention to detail, client collaboration, and a balance
+                    of creativity, functionality, and sustainability.
+                </p>
             </div>
-          </div>
-          <div
-            class="elementor-element elementor-element-73af9f7 e-flex e-con-boxed e-con e-parent"
-            data-id="73af9f7"
-            data-element_type="container"
-          >
-            <div class="e-con-inner">
-              <div
-                class="elementor-element elementor-element-afcafb8 elementor-widget-divider--view-line elementor-widget elementor-widget-divider"
-                data-id="afcafb8"
-                data-element_type="widget"
-                data-widget_type="divider.default"
-              >
-                <div class="elementor-widget-container">
-                  <div class="elementor-divider">
-                    <span class="elementor-divider-separator"> </span>
-                  </div>
-                </div>
-              </div>
+            <div class="founder-image">
+                <img src="{% static 'images/founder.jpg' %}" alt="Fardad Ghasemzadeh">
             </div>
-          </div>
-          <div
-            class="elementor-element elementor-element-321d353 e-flex e-con-boxed e-con e-parent"
-            data-id="321d353"
-            data-element_type="container"
-          >
-            <div class="e-con-inner">
-              <div
-                class="elementor-element elementor-element-285a33c elementor-widget elementor-widget-heading"
-                data-id="285a33c"
-                data-element_type="widget"
-                data-widget_type="heading.default"
-              >
-                <div class="elementor-widget-container">
-                  <h2 class="elementor-heading-title elementor-size-default">
-                    OUR TEAM
-                  </h2>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="elementor-element elementor-element-5619137 e-flex e-con-boxed e-con e-parent"
-            data-id="5619137"
-            data-element_type="container"
-          >
-            <div class="e-con-inner">
-              <div
-                class="elementor-element elementor-element-00d06ad elementor-widget elementor-widget-spacer"
-                data-id="00d06ad"
-                data-element_type="widget"
-                data-widget_type="spacer.default"
-              >
-                <div class="elementor-widget-container">
-                  <div class="elementor-spacer">
-                    <div class="elementor-spacer-inner"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="elementor-element elementor-element-8008511 e-grid e-con-boxed e-con e-parent"
-            data-id="8008511"
-            data-element_type="container"
-          >
-            <div class="e-con-inner">
-              <div
-                class="elementor-element elementor-element-9389225 elementor-position-top elementor-widget elementor-widget-image-box"
-                data-id="9389225"
-                data-element_type="widget"
-                data-widget_type="image-box.default"
-              >
-                <div class="elementor-widget-container">
-                  <div class="elementor-image-box-wrapper">
-                    <figure class="elementor-image-box-img">
-                      <img
-                        decoding="async"
-                        width="310"
-                        height="541"
-                        src="{% static 'images/shervin-phd.jpg' %}"
-                        class="attachment-full size-full wp-image-1921"
-                        alt=""
-                      />
-                    </figure>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="elementor-element elementor-element-8224806 elementor-position-top elementor-widget elementor-widget-image-box"
-                data-id="8224806"
-                data-element_type="widget"
-                data-widget_type="image-box.default"
-              >
-                <div class="elementor-widget-container">
-                  <div class="elementor-image-box-wrapper">
-                    <figure class="elementor-image-box-img">
-                      <img
-                        decoding="async"
-                        width="315"
-                        height="542"
-                        src="{% static 'images/amirali-ba.jpg' %}"
-                        class="attachment-full size-full wp-image-1922"
-                        alt=""
-                      />
-                    </figure>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="elementor-element elementor-element-1954cba e-grid e-con-boxed e-con e-parent"
-            data-id="1954cba"
-            data-element_type="container"
-          >
-            <div class="e-con-inner">
-              <div
-                class="elementor-element elementor-element-d6dc6f1 elementor-position-top elementor-widget elementor-widget-image-box"
-                data-id="d6dc6f1"
-                data-element_type="widget"
-                data-widget_type="image-box.default"
-              >
-                <div class="elementor-widget-container">
-                  <div class="elementor-image-box-wrapper">
-                    <figure class="elementor-image-box-img">
-                      <img
-                        loading="lazy"
-                        decoding="async"
-                        width="310"
-                        height="564"
-                        src="{% static 'images/yazdan-ma.jpg' %}"
-                        class="attachment-full size-full wp-image-1923"
-                        alt=""
-                      />
-                    </figure>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="elementor-element elementor-element-9722a4b elementor-position-top elementor-widget elementor-widget-image-box"
-                data-id="9722a4b"
-                data-element_type="widget"
-                data-widget_type="image-box.default"
-              >
-                <div class="elementor-widget-container">
-                  <div class="elementor-image-box-wrapper">
-                    <figure class="elementor-image-box-img">
-                      <img
-                        loading="lazy"
-                        decoding="async"
-                        width="300"
-                        height="563"
-                        src="{% static 'images/pedram-ba.jpg' %}"
-                        class="attachment-full size-full wp-image-1924"
-                        alt=""
-                      />
-                    </figure>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="elementor-element elementor-element-ac01328 e-grid e-con-boxed e-con e-parent"
-            data-id="ac01328"
-            data-element_type="container"
-          >
-            <div class="e-con-inner">
-              <div
-                class="elementor-element elementor-element-386f29a elementor-position-top elementor-widget elementor-widget-image-box"
-                data-id="386f29a"
-                data-element_type="widget"
-                data-widget_type="image-box.default"
-              >
-                <div class="elementor-widget-container">
-                  <div class="elementor-image-box-wrapper">
-                    <figure class="elementor-image-box-img">
-                      <img
-                        loading="lazy"
-                        decoding="async"
-                        width="300"
-                        height="560"
-                        src="{% static 'images/alireza-ma.jpg' %}"
-                        class="attachment-full size-full wp-image-1925"
-                        alt=""
-                      />
-                    </figure>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="elementor-element elementor-element-ae581c7 elementor-position-top elementor-widget elementor-widget-image-box"
-                data-id="ae581c7"
-                data-element_type="widget"
-                data-widget_type="image-box.default"
-              >
-                <div class="elementor-widget-container">
-                  <div class="elementor-image-box-wrapper">
-                    <figure class="elementor-image-box-img">
-                      <img
-                        loading="lazy"
-                        decoding="async"
-                        width="300"
-                        height="560"
-                        src="{% static 'images/shakila-ma.jpg' %}"
-                        class="attachment-full size-full wp-image-1926"
-                        alt=""
-                      />
-                    </figure>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="elementor-element elementor-element-b9c3697 e-grid e-con-boxed e-con e-parent"
-            data-id="b9c3697"
-            data-element_type="container"
-          >
-            <div class="e-con-inner">
-              <div
-                class="elementor-element elementor-element-e052adb elementor-position-top elementor-widget elementor-widget-image-box"
-                data-id="e052adb"
-                data-element_type="widget"
-                data-widget_type="image-box.default"
-              >
-                <div class="elementor-widget-container">
-                  <div class="elementor-image-box-wrapper">
-                    <figure class="elementor-image-box-img">
-                      <img
-                        loading="lazy"
-                        decoding="async"
-                        width="300"
-                        height="532"
-                        src="{% static 'images/shiva-bisav.jpg' %}"
-                        class="attachment-full size-full wp-image-1927"
-                        alt=""
-                      />
-                    </figure>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="elementor-element elementor-element-a6a155f elementor-position-top elementor-widget elementor-widget-image-box"
-                data-id="a6a155f"
-                data-element_type="widget"
-                data-widget_type="image-box.default"
-              >
-                <div class="elementor-widget-container">
-                  <div class="elementor-image-box-wrapper">
-                    <figure class="elementor-image-box-img">
-                      <img
-                        loading="lazy"
-                        decoding="async"
-                        width="300"
-                        height="558"
-                        src="{% static 'images/mohadese-ma.jpg' %}"
-                        class="attachment-full size-full wp-image-1928"
-                        alt=""
-                      />
-                    </figure>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
-    </main>
 
-    <script type="text/javascript">
-      const lazyloadRunObserver = () => {
-        const lazyloadBackgrounds = document.querySelectorAll(
-          `.e-con.e-parent:not(.e-lazyloaded)`
-        );
-        const lazyloadBackgroundObserver = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                let lazyloadBackground = entry.target;
-                if (lazyloadBackground) {
-                  lazyloadBackground.classList.add("e-lazyloaded");
-                }
-                lazyloadBackgroundObserver.unobserve(entry.target);
-              }
-            });
-          },
-          { rootMargin: "200px 0px 200px 0px" }
-        );
-        lazyloadBackgrounds.forEach((lazyloadBackground) => {
-          lazyloadBackgroundObserver.observe(lazyloadBackground);
-        });
-      };
-      const events = ["DOMContentLoaded", "elementor/lazyload/observe"];
-      events.forEach((event) => {
-        document.addEventListener(event, lazyloadRunObserver);
-      });
-    </script>
-    <script
-      src="{% static 'js/hello-frontend.min.js' %}"
-      id="hello-theme-frontend-js"
-    ></script>
-    <script
-      src="{% static 'js/jquery.smartmenus.min.js' %}"
-      id="smartmenus-js"
-    ></script>
-    <script
-      src="{% static 'js/e-gallery.min.js' %}"
-      id="elementor-gallery-js"
-    ></script>
-    <script src="{% static 'js/persian-date.min.js' %}" id="pDate-js"></script>
-    <script
-      src="{% static 'js/persian-datepicker.min.js' %}"
-      id="pDatepicker-js"
-    ></script>
-    <script
-      src="{% static 'js/persian-datepicker-loader.js' %}"
-      id="pDatepickerLoader-js"
-    ></script>
-    <script
-      src="{% static 'js/webpack-pro.runtime.min.js' %}"
-      id="elementor-pro-webpack-runtime-js"
-    ></script>
-    <script
-      src="{% static 'js/webpack.runtime.min.js' %}"
-      id="elementor-webpack-runtime-js"
-    ></script>
-    <script
-      src="{% static 'js/frontend-modules.min.js' %}"
-      id="elementor-frontend-modules-js"
-    ></script>
-    <script src="{% static 'js/hooks.min.js6' %}" id="wp-hooks-js"></script>
-    <script src="{% static 'js/i18n.min.js' %}" id="wp-i18n-js"></script>
-    <script id="wp-i18n-js-after">
-      wp.i18n.setLocaleData({ "text direction\u0004ltr": ["rtl"] });
-    </script>
-    <script id="elementor-pro-frontend-js-before">
-      var ElementorProFrontendConfig = {
-        ajaxurl: "http:\/\/fardadarchitects.com\/wp-admin\/admin-ajax.php",
-        nonce: "b88da10a17",
-        urls: {
-          assets:
-            "http:\/\/fardadarchitects.com\/wp-content\/plugins\/elementor-pro\/assets\/",
-          rest: "http:\/\/fardadarchitects.com\/wp-json\/",
-        },
-        settings: { lazy_load_background_images: true },
-        shareButtonsNetworks: {
-          facebook: { title: "Facebook", has_counter: true },
-          twitter: { title: "Twitter" },
-          linkedin: { title: "LinkedIn", has_counter: true },
-          pinterest: { title: "Pinterest", has_counter: true },
-          reddit: { title: "Reddit", has_counter: true },
-          vk: { title: "VK", has_counter: true },
-          odnoklassniki: { title: "OK", has_counter: true },
-          tumblr: { title: "Tumblr" },
-          digg: { title: "Digg" },
-          skype: { title: "Skype" },
-          stumbleupon: { title: "StumbleUpon", has_counter: true },
-          mix: { title: "Mix" },
-          telegram: { title: "Telegram" },
-          pocket: { title: "Pocket", has_counter: true },
-          xing: { title: "XING", has_counter: true },
-          whatsapp: { title: "WhatsApp" },
-          email: { title: "Email" },
-          print: { title: "Print" },
-          "x-twitter": { title: "X" },
-          threads: { title: "Threads" },
-        },
-        facebook_sdk: { lang: "fa_IR", app_id: "" },
-        lottie: {
-          defaultAnimationUrl:
-            "http:\/\/fardadarchitects.com\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json",
-        },
-      };
-    </script>
-    <script
-      src="{% static 'js/frontend.min.js' %}"
-      id="elementor-pro-frontend-js"
-    ></script>
-    <script src="{% static 'js/core.min.js' %}" id="jquery-ui-core-js"></script>
-    <script id="elementor-frontend-js-before">
-      var elementorFrontendConfig = {
-        environmentMode: {
-          edit: false,
-          wpPreview: false,
-          isScriptDebug: false,
-        },
-        i18n: {
-          shareOnFacebook:
-            "\u0627\u0634\u062a\u0631\u0627\u06a9 \u06af\u0630\u0627\u0631\u06cc \u062f\u0631 Facebook",
-          shareOnTwitter:
-            "\u0627\u0634\u062a\u0631\u0627\u06a9 \u06af\u0630\u0627\u0631\u06cc \u062f\u0631 Twitter",
-          pinIt: "\u067e\u06cc\u0646 \u06a9\u0646\u06cc\u062f",
-          download: "\u062f\u0627\u0646\u0644\u0648\u062f",
-          downloadImage:
-            "\u062f\u0627\u0646\u0644\u0648\u062f \u062a\u0635\u0648\u06cc\u0631",
-          fullscreen: "\u062a\u0645\u0627\u0645\u200c\u0635\u0641\u062d\u0647",
-          zoom: "\u0628\u0632\u0631\u06af\u0646\u0645\u0627\u06cc\u06cc",
-          share:
-            "\u0627\u0634\u062a\u0631\u0627\u06a9 \u06af\u0630\u0627\u0631\u06cc",
-          playVideo: "\u067e\u062e\u0634 \u0648\u06cc\u062f\u06cc\u0648",
-          previous: "\u0642\u0628\u0644\u06cc",
-          next: "\u0628\u0639\u062f\u06cc",
-          close: "\u0628\u0633\u062a\u0646",
-          a11yCarouselWrapperAriaLabel:
-            "\u0686\u0631\u062e \u0641\u0644\u06a9 | \u067e\u06cc\u0645\u0627\u06cc\u0634 \u0627\u0641\u0642\u06cc: \u0641\u0644\u0634 \u0686\u067e \u0648 \u0631\u0627\u0633\u062a",
-          a11yCarouselPrevSlideMessage:
-            "\u0627\u0633\u0644\u0627\u06cc\u062f \u0642\u0628\u0644\u06cc",
-          a11yCarouselNextSlideMessage:
-            "\u0627\u0633\u0644\u0627\u06cc\u062f \u0628\u0639\u062f\u06cc",
-          a11yCarouselFirstSlideMessage:
-            "\u0627\u06cc\u0646 \u0627\u0648\u0644\u06cc\u0646 \u0627\u0633\u0644\u0627\u06cc\u062f \u0627\u0633\u062a",
-          a11yCarouselLastSlideMessage:
-            "\u0627\u06cc\u0646 \u0622\u062e\u0631\u06cc\u0646 \u0627\u0633\u0644\u0627\u06cc\u062f \u0627\u0633\u062a",
-          a11yCarouselPaginationBulletMessage:
-            "\u0631\u0641\u062a\u0646 \u0628\u0647 \u0627\u0633\u0644\u0627\u06cc\u062f",
-        },
-        is_rtl: true,
-        breakpoints: { xs: 0, sm: 480, md: 768, lg: 1025, xl: 1440, xxl: 1600 },
-        responsive: {
-          breakpoints: {
-            mobile: {
-              label:
-                "\u062d\u0627\u0644\u062a \u0639\u0645\u0648\u062f\u06cc \u0645\u0648\u0628\u0627\u06cc\u0644",
-              value: 767,
-              default_value: 767,
-              direction: "max",
-              is_enabled: true,
-            },
-            mobile_extra: {
-              label:
-                "\u062d\u0627\u0644\u062a \u0627\u0641\u0642\u06cc \u0645\u0648\u0628\u0627\u06cc\u0644",
-              value: 880,
-              default_value: 880,
-              direction: "max",
-              is_enabled: false,
-            },
-            tablet: {
-              label:
-                "\u062d\u0627\u0644\u062a \u0639\u0645\u0648\u062f\u06cc \u062a\u0628\u0644\u062a",
-              value: 1024,
-              default_value: 1024,
-              direction: "max",
-              is_enabled: true,
-            },
-            tablet_extra: {
-              label:
-                "\u062d\u0627\u0644\u062a \u0627\u0641\u0642\u06cc \u062a\u0628\u0644\u062a",
-              value: 1200,
-              default_value: 1200,
-              direction: "max",
-              is_enabled: false,
-            },
-            laptop: {
-              label: "\u0644\u067e \u062a\u0627\u067e",
-              value: 1366,
-              default_value: 1366,
-              direction: "max",
-              is_enabled: false,
-            },
-            widescreen: {
-              label:
-                "\u0635\u0641\u062d\u0647 \u0639\u0631\u06cc\u0636 (Widescreen)",
-              value: 2400,
-              default_value: 2400,
-              direction: "min",
-              is_enabled: false,
-            },
-          },
-          hasCustomBreakpoints: false,
-        },
-        version: "3.24.5",
-        is_static: false,
-        experimentalFeatures: {
-          e_font_icon_svg: true,
-          additional_custom_breakpoints: true,
-          container: true,
-          container_grid: true,
-          e_swiper_latest: true,
-          e_nested_atomic_repeaters: true,
-          e_optimized_control_loading: true,
-          e_onboarding: true,
-          theme_builder_v2: true,
-          "hello-theme-header-footer": true,
-          home_screen: true,
-          "ai-layout": true,
-          "nested-elements": true,
-          editor_v2: true,
-          e_element_cache: true,
-          "link-in-bio": true,
-          "floating-buttons": true,
-          "display-conditions": true,
-          "form-submissions": true,
-        },
-        urls: {
-          assets:
-            "http:\/\/fardadarchitects.com\/wp-content\/plugins\/elementor\/assets\/",
-          ajaxurl: "http:\/\/fardadarchitects.com\/wp-admin\/admin-ajax.php",
-          uploadUrl: "http:\/\/fardadarchitects.com\/wp-content\/uploads",
-        },
-        nonces: { floatingButtonsClickTracking: "8ac4be2fee" },
-        swiperClass: "swiper",
-        settings: { page: [], editorPreferences: [] },
-        kit: {
-          active_breakpoints: ["viewport_mobile", "viewport_tablet"],
-          global_image_lightbox: "yes",
-          lightbox_enable_counter: "yes",
-          lightbox_enable_fullscreen: "yes",
-          lightbox_enable_zoom: "yes",
-          lightbox_enable_share: "yes",
-          lightbox_title_src: "title",
-          lightbox_description_src: "description",
-          hello_header_logo_type: "logo",
-          hello_header_menu_layout: "horizontal",
-          hello_footer_logo_type: "logo",
-        },
-        post: {
-          id: 284,
-          title: "About%20%E2%80%93%20Fardad%20Architects",
-          excerpt: "",
-          featuredImage: false,
-        },
-      };
-    </script>
-    <script
-      src="{% static 'js/frontend.min.js' %}"
-      id="elementor-frontend-js"
-    ></script>
-    <script
-      src="{% static 'js/elements-handlers.min.js' %}"
-      id="pro-elements-handlers-js"
-    ></script>
-  </body>
+        <div class="horizontal-line"></div>
+
+      <!-- Our Team Section -->
+<div class="team-section">
+  <h2>OUR TEAM</h2>
+  <div class="team-members">
+      <div class="row">
+          <div class="col-md-3 text-center">
+              <img src="{% static 'images/team1.jpg' %}" class="img-fluid" alt="Amirali Mahutchian">
+              <h5>AMIRALI MAHUTCHIAN</h5>
+              <p class="text-muted">Project Architect</p>
+              <p class="text-muted">BA.ARC Tehran University</p>
+          </div>
+          <div class="col-md-3 text-center">
+              <img src="{% static 'images/team2.jpg' %}" class="img-fluid" alt="Shervin Esmaeilzadeh">
+              <h5>SHERVIN ESMAEILZADEH</h5>
+              <p class="text-muted">Project Architect</p>
+              <p class="text-muted">PhD.ARC Tehran University</p>
+          </div>
+          <div class="col-md-3 text-center">
+              <img src="{% static 'images/team3.jpg' %}" class="img-fluid" alt="Team Member 3">
+              <h5>TEAM MEMBER 3</h5>
+              <p class="text-muted">Project Architect</p>
+              <p class="text-muted">BA.ARC Tehran University</p>
+          </div>
+          <div class="col-md-3 text-center">
+              <img src="{% static 'images/team4.jpg' %}" class="img-fluid" alt="Team Member 4">
+              <h5>TEAM MEMBER 4</h5>
+              <p class="text-muted">Project Architect</p>
+              <p class="text-muted">BA.ARC Tehran University</p>
+          </div>
+      </div>
+  </div>
+</div>
+
+</body>
 </html>
