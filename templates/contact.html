@@ -43,31 +43,20 @@
 
         <!-- Thin Horizontal Line -->
         <hr class="custom-line mt-4">
-        <!-- Contact Form -->
-        <div class="contact-form mt-4">
-            <h3>Get in Touch</h3>
-            <form method="POST" action="">
+        <div class="form-container">
+            <h1 id="fardad">FARDAD</h1>
+            <form method="POST">
                 {% csrf_token %}
-                <div class="mb-3">
-                    <label for="fullname" class="form-label">Full Name</label>
-                    <input type="text" class="form-control" id="fullname" name="fullname" required>
+                <input type="text" name="full_name" placeholder="full name" required>
+                <input type="email" name="email" placeholder="email address" required>
+                <input type="tel" name="phone" placeholder="phone number" required>
+                <div class="message-button-container">
+                    <textarea name="message" placeholder="message" required></textarea>
+                    <button type="submit">send</button>
                 </div>
-                <div class="mb-3">
-                    <label for="email" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="email" name="email" required>
-                </div>
-                <div class="mb-3">
-                    <label for="phone" class="form-label">Phone</label>
-                    <input type="text" class="form-control" id="phone" name="phone" required>
-                </div>
-                <div class="mb-3">
-                    <label for="message" class="form-label">Message</label>
-                    <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-dark">Send Message</button>
             </form>
         </div>
-
+        
     </div>
 
 </body>

@@ -37,27 +37,85 @@ p {
 }
 .custom-line {
   border: none;
-  height: 3px; /* Thicker */
+  height: 2px; /* Thicker */
   background-color: #333; /* Full black */
-  width: 100%;
+  width: 93%;
+  margin-left: 80px;
   margin-top: 20px;
   opacity: 1; /* Ensure full opacity */
 }
 
-.contact-form {
-  max-width: 90%;
-  margin: 40px auto;
-  padding: 20px;
-}
-.contact-form h3 {
-  text-align: left;
-  font-size: 30px;
-  font-weight: bold;
+input, textarea,form-control {
+  width: 100%;
+  padding: 10px;
   margin-bottom: 20px;
-}
-.form-label {
-  display: block;
-  font-size: 15px;
-  font-weight: bold;
+  margin-top: 20px;
+  border: none;
+  border-bottom: 1px solid #000;
+  outline: none;
+  font-size: 16px;
+  width: 50%;
+  margin-left: 7%;
 }
 
+button {
+  background: black;
+  color: white;
+  padding: 10px 15px;
+  margin-left: 100px;
+  margin-bottom: 150px;
+
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+#fardad{
+  margin-top: 20px;
+  margin-left: 7%;
+  font-size: 30px;
+  color: #000000;
+}
+
+/* Add this new rule */
+.message-button-container {
+  display: flex;
+  gap: 0px;
+  width: 60%;
+  margin-left: 3%;
+
+}
+
+/* Modify textarea rule */
+textarea {
+  flex: 1; /* Take remaining space */
+  margin-bottom: 0; /* Remove bottom margin */
+  height: 40px; /* Set fixed height */
+}
+
+/* Update button styling */
+button {
+  background: black;
+  color: white;
+  padding: 4px 25px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 5px;
+  height: 40px; /* Match textarea height */
+  align-self: flex-end; /* Align to bottom */
+  margin-top:20px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Remove margin from form container */
+.form-container {
+  margin-bottom: 150px; /* Adjust as needed */
+}
