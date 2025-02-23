@@ -1,0 +1,7 @@
+Name: Wave Residence
+Date: 2023
+location: Motel Qu
+Client: Saeid Daneshvar
+Constructor: Vahid Poorali
+Area: 3500 sqm
+Under Construction
