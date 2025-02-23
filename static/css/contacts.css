@@ -44,3 +44,21 @@ p {
   margin-top: 20px;
   opacity: 1; /* Ensure full opacity */
 }
+
+.contact-form {
+  max-width: 90%;
+  margin: 40px auto;
+  padding: 20px;
+}
+.contact-form h3 {
+  text-align: left;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.form-label {
+  display: block;
+  font-size: 15px;
+  font-weight: bold;
+}
+
