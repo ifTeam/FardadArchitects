@@ -1,48 +1,46 @@
-
-
-
-h2 {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 20px;
+.contact-map-container {
+  display: flex; /* Make it flexbox */
+  justify-content: space-between; /* Push items apart */
+  align-items: center; /* Align vertically */
+  gap: 20px; /* Space between elements */
+  flex-wrap: wrap; /* Make it responsive */
+  margin-top: 40px;
+  padding-left: 60px;
 }
 
-p {
-    font-size: 1.1rem;
-}
-
-form .form-control {
-    border-radius: 5px;
-    padding: 10px;
-}
-
-button {
-    background-color: #0056b3;
-    color: white;
-    padding: 10px;
-    font-size: 1rem;
-    border: none;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #003d80;
-}
-
-
-.map-container {
-    max-width: 400px;
-    margin: 30px auto;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    filter: grayscale(100%);
-    position: flex;
-    flex: 1;
-} 
+/* Contact Info on Left */
 #contact-info {
-    display: flex;
-    justify-content: space-between;
-    margin: 20px 0;
-    flex: 1;
+  flex: 1;
+  min-width: 300px;
+}
+
+/* Map on Right */
+.map-container {
+  flex: 1;
+  max-width: 400px;
+  min-width: 300px;
+  margin: 60px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  filter: grayscale(100%);
+}
+strong {
+  color: #000000;
+  font-family: "Roboto", Sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+  display: block;
+}
+p {
+  font-size: 20px;
+  padding: 40px 0;
+}
+.custom-line {
+  border: none;
+  height: 3px; /* Thicker */
+  background-color: #333; /* Full black */
+  width: 100%;
+  margin-top: 20px;
+  opacity: 1; /* Ensure full opacity */
 }

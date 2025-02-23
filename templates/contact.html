@@ -16,74 +16,35 @@
     {% include 'base/header.html' %}
 
     <div class="container mt-5">
-        <h2 class="text-center">Contact Us</h2>
-        <p class="text-center">We would love to hear from you. Please fill out the form below.</p>
 
-        <!-- Success Message Display -->
-        {% if messages %}
-        <div class="alert alert-success">
-            {% for message in messages %}
-                {{ message }}
-            {% endfor %}
-        </div>
-        {% endif %}
-
-
+        <!-- Contact & Map Section -->
+        <div class="contact-map-container d-flex flex-wrap justify-content-between align-items-center mt-4">
+            
             <!-- Contact Info -->
-            <div class="col-md-6" id="contact-info">
-                <h3>Our Contact Information</h3>
-                <p><strong>Address:</strong> 13 Chenar St, Darakeh, Tehran, Iran</p>
-                <p><strong>Email:</strong> info@fardadarchitects.com</p>
-                <p><strong>Phone:</strong> +98 21 1234 5678</p>
+            <div id="contact-info" class="flex-grow-1 p-3">
+                <strong>Head office:</strong> <p>+98 21 1234 5678</p>
+                <strong>Address:</strong> <p>13 Chenar St, Darakeh, Tehran, Iran</p>
+                <strong>Email:</strong> <p>info@fardadarchitects.com</p>
             </div>
 
-        <div class="row">
-            <!-- Contact Form -->
-            <div class="col-md-6">
-                <h3>Get in Touch</h3>
-                <form method="POST">
-                  {% csrf_token %}
-              
-                  <div class="mb-3">
-                      <label for="id_name" class="form-label">Your Name</label>
-                      {{ form.name }}
-                  </div>
-              
-                  <div class="mb-3">
-                      <label for="id_email" class="form-label">Your Email</label>
-                      {{ form.email }}
-                  </div>
-              
-                  <div class="mb-3">
-                      <label for="id_subject" class="form-label">Subject</label>
-                      {{ form.subject }}
-                  </div>
-              
-                  <div class="mb-3">
-                      <label for="id_message" class="form-label">Your Message</label>
-                      {{ form.message }}
-                  </div>
-              
-                  <button type="submit" class="btn btn-primary w-100">Send Message</button>
-              </form>
-              
+            <!-- Google Map -->
+            <div class="map-container flex-grow-1">
+                <iframe 
+                    src="https://maps.google.com/maps?q=%D8%AA%D9%87%D8%B1%D8%A7%D9%86%20%20%D8%AF%D8%B1%DA%A9%D9%87%20%D8%AE%DB%8C%D8%A7%D8%A8%D8%A7%D9%86%2013%20%DA%86%D9%86%D8%A7%D8%B1%20&t=m&z=15&output=embed&iwloc=near" 
+                    width="100%" 
+                    height="400" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
             </div>
+
         </div>
 
-        <!-- Google Map -->
-        <h3 class="mt-5 text-center">Our Location</h3>
-        <div class="map-container">
-            <iframe 
-                src="https://maps.google.com/maps?q=%D8%AA%D9%87%D8%B1%D8%A7%D9%86%20%20%D8%AF%D8%B1%DA%A9%D9%87%20%D8%AE%DB%8C%D8%A7%D8%A8%D8%A7%D9%86%2013%20%DA%86%D9%86%D8%A7%D8%B1%20&t=m&z=15&output=embed&iwloc=near" 
-                width="100%" 
-                height="400" 
-                style="border:0;" 
-                allowfullscreen="" 
-                loading="lazy">
-            </iframe>
-        </div>
+        <!-- Thin Horizontal Line -->
+        <hr class="custom-line mt-4">
+
     </div>
-
 
 </body>
 </html>
