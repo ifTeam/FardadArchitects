@@ -79,7 +79,7 @@ def project_detail_view(request, project_id):
     context = {
         "project": {
             "id": project_id,
-            "name": project_info.get("name", "Unknown"),
+            "name": project_info.get("name", "Unknown").upper(),
             "date": project_info.get("date", "Unknown"),
             "location": project_info.get("location", "Unknown"),
             "client": project_info.get("client", "Unknown"),
