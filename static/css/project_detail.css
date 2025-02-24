@@ -10,7 +10,7 @@
     width: 100%;
     overflow: hidden; /* Prevent cropping */
   }
-  
+
   .image-container img {
     width: 80%;
     height: 70%;
@@ -28,7 +28,10 @@
     opacity: 0;
   }
   
-  h1{
+  #project-name{
+    bottom:0;
+    margin: 0px;
+    padding: 0px;
     font-size: 60px;
   }
   
