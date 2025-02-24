@@ -1,7 +1,0 @@
-Name: Artiman
-Date: 2023
-location: Lavasan
-Client: Ali Madani
-Constructor: Hasan Rezaei
-Area: 500 sqm
-Under Construction

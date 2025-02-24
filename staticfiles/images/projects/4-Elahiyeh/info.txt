@@ -1,7 +1,0 @@
-Name: Elahiyeh
-Date: 2016
-location: Elahiyeh
-Client: Mohsen Kazemi
-Constructor: Mohsen Kazemi
-Area: 8000 sqm
-Under Construction

@@ -169,3 +169,45 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+
+# Django
+staticfiles/
+/staticfiles/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+.env
+.env.local
+*.venv
+
+# Django stuff
+db.sqlite3
+db.sqlite3-journal
+/media/
+staticfiles/
+*.log
+
+# Migrations (optional, keep if you want full version control)
+**/migrations/*.pyc
+**/migrations/*.py
+
+# Node.js / frontend
+node_modules/
+npm-debug.log*
+yarn-error.log
+package-lock.json
+
+# IDE / Editor settings
+.vscode/
+.idea/
+*.sublime-workspace
+
+# MacOS / Linux
+.DS_Store
+*.swp

@@ -1,7 +1,0 @@
-Name: Rosseta Ajudaniyeh
-Date: 2021
-location: Ajudaniyeh
-Client: Mehdi Kazemi
-Constructor: Mehdi Kazemi
-Area: 30000 sqm
-Under Construction
