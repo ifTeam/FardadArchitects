@@ -20,20 +20,25 @@
     {% include 'base/header.html' %}
 
     <div class="container mt-4">
-        <h1>{{ project.name }}</h1>
-        <p><strong>Date:</strong> {{ project.date }}</p>
-        <p><strong>Location:</strong> {{ project.location }}</p>
-        <p><strong>Client:</strong> {{ project.client }}</p>
-        <p><strong>Constructor:</strong> {{ project.constructor }}</p>
-        <p><strong>Area:</strong> {{ project.area }}</p>
-        <p><strong>Status:</strong> {{ project.status }}</p>
 
         <!-- Day & Night Image Fade Effect -->
         <div class="image-container">
             <img src="{% static project.day_image %}" id="day-img" alt="Day View">
             <img src="{% static project.night_image %}" id="night-img" alt="Night View">
         </div>
+        <h1>{{ project.name }}</h1>
 
+
+         
+
+
+
+        <p><strong>Date:</strong> {{ project.date }}</p>
+        <p><strong>Location:</strong> {{ project.location }}</p>
+        <p><strong>Client:</strong> {{ project.client }}</p>
+        <p><strong>Constructor:</strong> {{ project.constructor }}</p>
+        <p><strong>Area:</strong> {{ project.area }}</p>
+        <p><strong>Status:</strong> {{ project.status }}</p>
         <h3 class="mt-4">Project Gallery</h3>
 
         <!-- Slideshow for Additional Images -->
@@ -64,8 +69,8 @@
             function fadeEffect() {
                 $("#night-img")
                     .fadeTo(3000, 1)  // Fade in over 2 seconds
-                    .delay(1000)       // Stay fully visible for 3 seconds
-                    .fadeTo(3000, 0, fadeEffect);  // Fade out over 2 seconds, then repeat
+                    .delay(3000)       // Stay fully visible for 3 seconds
+                    .fadeTo(3000, 0, fadeEffect).delay(3000);  // Fade out over 2 seconds, then repeat
             }
         
             fadeEffect(); // Start the loop
