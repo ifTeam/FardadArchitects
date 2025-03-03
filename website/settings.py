@@ -7,10 +7,10 @@ SECRET_KEY = 'django-insecure-na18a6z-k&y0z!g(1h=ubu0c&3%n&1lyaugk7@r%57gey-7w@&
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['91.107.156.235']
+ALLOWED_HOSTS = ['91.84.110.31']
 
 # CSRF Trusted Origins for production
-CSRF_TRUSTED_ORIGINS = ['http://91.107.156.235']
+CSRF_TRUSTED_ORIGINS = ['http://91.84.110.31']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
