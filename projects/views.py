@@ -49,7 +49,6 @@ def projects_view(request):
     return render(request, "projects/projects.html", {"projects": projects})
 
 
-
 def project_detail_view(request, project_id):
     """ Display a single project's details """
     project_dir = os.path.join(settings.BASE_DIR, "static", "images", "projects", project_id)
@@ -71,6 +70,9 @@ def project_detail_view(request, project_id):
     # Check if day.jpg and night.jpg exist
     day_image = f"images/projects/{project_id}/day.jpg"
     night_image = f"images/projects/{project_id}/night.jpg"
+    
+    # Add the map.svg path
+    map_svg = f"images/projects/{project_id}/map.svg"
 
     image_files = sorted([
         f for f in os.listdir(project_dir) if f.endswith((".jpg", ".png")) and f[:2].isdigit()
@@ -88,6 +90,7 @@ def project_detail_view(request, project_id):
             "status": project_info.get("status", ""),
             "day_image": day_image,
             "night_image": night_image,
+            "map_svg": map_svg,  # Add the map SVG path
             "slideshow_images": [f"images/projects/{project_id}/{img}" for img in image_files],
         }
     }
