@@ -10,68 +10,130 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
     <link rel="stylesheet" href="{% static 'css/about.css' %}">
-    
 </head>
 <body>
 
-   
   {% include 'base/header.html' %}
 
-    <div class="about-container">
-        <!-- Founder Section -->
-        <div class="founder-section">
-            <div class="founder-text">
-                <h1>FARDAD GHASEMZADEH</h1>
-                <h3 class="text-muted">Founder</h3>
-                <div class="horizontal-line"></div>
-                <p>
-                    Fardad Architects, founded in 2018 by Fardad Ghasemzadeh, specializes in
-                    innovative, functional, and sustainable architectural solutions.
-                    With expertise in Digital Architecture and cutting-edge design, the studio
-                    focuses on creating aesthetically compelling and highly functional spaces.
-                    Their approach emphasizes shaping environments that enhance living and working
-                    experiences through attention to detail, client collaboration, and a balance
-                    of creativity, functionality, and sustainability.
-                </p>
-            </div>
-            <div class="founder-image">
-                <img src="{% static 'images/founder.jpg' %}" alt="Fardad Ghasemzadeh">
-            </div>
+
+<div class="container">
+    <!-- Leader Box -->
+    <div class="leader-box">
+        <img src="{% static 'images/Team/founder.jpg'%}" alt="Fardad Ghasemzadeh" class="leader-image">
+        <div class="leader-info">
+            <h2 class="leader-name">FARDAD GHASEMZADEH</h2>
+            <p class="leader-position">Founder</p>
+            <div class="leader-line"></div>
+            <p class="leader-description">
+                Fardad Architects is an architecture studio founded in 2018 by Fardad ghasemzadeh.
+                We are a team dedicated to designing innovative, functional, and sustainable
+                architectural solutions. With a focus on the integration of form, space, and structure,
+                we aim to create environments that are both aesthetically compelling and highly
+                functional. Our founder, Fardad ghasemzadeh, with a background in Digital
+                Architecture from the University of Science and Technology, brings a deep
+                understanding of architectural planning, structural performance, and
+                cutting-edge design technologies.
+                At Fardad Architects, we believe that architecture goes beyond just
+                creating buildings – it is about shaping spaces that enhance the way people
+                live, work, and interact with their environment. Our approach is driven by
+                a passion for detail and a commitment to innovative design, whether it’s residential,
+                commercial, or urban development.
+                We collaborate closely with our clients to understand their vision and needs,
+                ensuring that every project is a reflection of both their aspirations and the unique
+                characteristics of its context. Through creative problem-solving and a multidisciplinary
+                approach, we strive to push the boundaries of architecture while remaining deeply
+                rooted in functionality and sustainability.
+            </p>
+        </div>
+    </div>  
+    
+
+
+
+        <!-- Member 2 (image on left) -->
+        <div class="member-box">
+            <div class="text-box">
+                <h1 id="our">OUR<br>TEAM</h1>
+                </div>
         </div>
 
-        <div class="horizontal-line"></div>
 
-      <!-- Our Team Section -->
-<div class="team-section">
-  <h2>OUR TEAM</h2>
-  <div class="team-members">
-      <div class="row">
-          <div class="col-md-3 text-center">
-              <img src="{% static 'images/team1.jpg' %}" class="img-fluid" alt="Amirali Mahutchian">
-              <h5>AMIRALI MAHUTCHIAN</h5>
-              <p class="text-muted">Project Architect</p>
-              <p class="text-muted">BA.ARC Tehran University</p>
-          </div>
-          <div class="col-md-3 text-center">
-              <img src="{% static 'images/team2.jpg' %}" class="img-fluid" alt="Shervin Esmaeilzadeh">
-              <h5>SHERVIN ESMAEILZADEH</h5>
-              <p class="text-muted">Project Architect</p>
-              <p class="text-muted">PhD.ARC Tehran University</p>
-          </div>
-          <div class="col-md-3 text-center">
-              <img src="{% static 'images/team3.jpg' %}" class="img-fluid" alt="Team Member 3">
-              <h5>TEAM MEMBER 3</h5>
-              <p class="text-muted">Project Architect</p>
-              <p class="text-muted">BA.ARC Tehran University</p>
-          </div>
-          <div class="col-md-3 text-center">
-              <img src="{% static 'images/team4.jpg' %}" class="img-fluid" alt="Team Member 4">
-              <h5>TEAM MEMBER 4</h5>
-              <p class="text-muted">Project Architect</p>
-              <p class="text-muted">BA.ARC Tehran University</p>
-          </div>
-      </div>
-  </div>
+
+
+    <!-- Team Members -->
+    <div class="members-row">
+        <!-- Member 1 (image on right) -->
+        <div class="member-box">
+            <img src="{% static 'images/Team/SHERVIN-ESMAEILZADEH.jpg'%}" alt="Team Member 1" class="member-image">
+            <div class="member-info">
+                <h3 class="member-name">SHERVIN ESMAEILZADEH</h3>
+                <p class="member-position">project architect</p>
+            </div>
+        </div>
+        
+        <!-- Member 2 (image on left) -->
+        <div class="member-box">
+            <img src="{% static 'images/Team/AMIRALI-MAHUTCHIAN.jpg'%}" alt="Team Member 2" class="member-image">
+            <div class="member-info">
+                <h3 class="member-name">AMIRALI MOHUTCHIAN</h3>
+                <p class="member-position">project architect</p>
+            </div>
+        </div>
+        
+        <!-- Member 3 (image on right) -->
+        <div class="member-box">
+            <img src="{% static 'images/Team/AMIRYAZDAN-GOUDARZI.jpg'%}" alt="Team Member 3" class="member-image">
+            <div class="member-info">
+                <h3 class="member-name">AMIR YAZDAN GOUDARZI</h3>
+                <p class="member-position">junior architect</p>
+            </div>
+        </div>
+        
+        <!-- Member 4 (image on left) -->
+        <div class="member-box">
+            <img src="{% static 'images/Team/PEDRAM-SOURI.jpg'%}" alt="Team Member 4" class="member-image">
+            <div class="member-info">
+                <h3 class="member-name">PEDRAM SOURI</h3>
+                <p class="member-position">bim modeler</p>
+            </div>
+        </div>
+        
+        <!-- Member 5 (image on right) -->
+        <div class="member-box">
+            <img src="{% static 'images/Team/no-image.png'%}" alt="Team Member 5" class="member-image">
+            <div class="member-info">
+                <h3 class="member-name">ALIREZA KHODADADI</h3>
+                <p class="member-position">concept designt</p>
+            </div>
+        </div>
+        
+        <!-- Member 6 (image on left) -->
+        <div class="member-box">
+            <img src="{% static 'images/Team/no-image.png'%}" alt="Team Member 6" class="member-image">
+            <div class="member-info">
+                <h3 class="member-name">SHAKILA BABAEI</h3>
+                <p class="member-position">junior architect</p>
+            </div>
+        </div>
+        
+        <!-- Member 7 (image on right) -->
+        <div class="member-box">
+            <img src="{% static 'images/Team/no-image.png'%}" alt="Team Member 7" class="member-image">
+            <div class="member-info">
+                <h3 class="member-name">SHIVA MOHAMMADI</h3>
+                <p class="member-position">junior architect</p>
+            </div>
+        </div>
+        
+        <!-- Member 8 (image on left) -->
+        <div class="member-box">
+            <img src="{% static 'images/Team/no-image.png'%}" alt="Team Member 8" class="member-image">
+            <div class="member-info">
+                <h3 class="member-name">MOHADESE HAJNORUZI</h3>
+                <p class="member-position">project architect</p>
+            </div>
+        </div>
+    </div>
 </div>
 
 </body>
