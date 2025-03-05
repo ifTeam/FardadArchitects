@@ -71,73 +71,57 @@
         </div>
       </div>
 
-      <!-- Row 6: Slideshow -->
-      <div class="row">
-        <div class="box">
-          <!-- Slideshow for Additional Images -->
-          <div id="slideshow" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-              {% for gallery, images in project.slideshows.items %}
-              <div class="row">
-                <h1>{{ gallery }}</h1>
-
-                <div class="box">
-                      <div id="slideshow-{{ forloop.counter }}" class="carousel slide" data-bs-ride="carousel">
-                          <div class="carousel-inner">
-                              {% for image in images %}
-                              <div class="carousel-item {% if forloop.first %}active{% endif %}">
-                                  <img src="{% static image %}" class="d-block w-100" alt="Project Image">
-                              </div>
-                              {% endfor %}
-                          </div>
-      
-                          <button class="carousel-control-prev" type="button" data-bs-target="#slideshow-{{ forloop.counter }}" data-bs-slide="prev">
-                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                              <span class="visually-hidden">Previous</span>
-                          </button>
-      
-                          <button class="carousel-control-next" type="button" data-bs-target="#slideshow-{{ forloop.counter }}" data-bs-slide="next">
-                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                              <span class="visually-hidden">Next</span>
-                          </button>
-                      </div>
-                  </div>
+<!-- Row 6: Slideshow -->
+<div class="row">
+  <div class="box">
+    <div id="slideshow">
+      {% for gallery, images in project.slideshows.items %}
+      <div class="gallery-section">
+        <div class="row gallery-header">
+          <div class="box">
+            <h2 class="slideshow-title">{{ gallery }}</h2>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="box">
+            <div id="carousel-{{ forloop.counter }}" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                {% for image in images %}
+                <button type="button" 
+                        data-bs-target="#carousel-{{ forloop.parentloop.counter }}" 
+                        data-bs-slide-to="{{ forloop.counter0 }}" 
+                        {% if forloop.first %}class="active"{% endif %}>
+                </button>
+                {% endfor %}
               </div>
-              {% endfor %}
-         
+
+              <div class="carousel-inner">
+                {% for image in images %}
+                <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                  <img src="{% static image %}" class="d-block w-100" alt="Project Image">
+                </div>
+                {% endfor %}
+              </div>
+
+              <button class="carousel-control-prev" type="button" 
+                      data-bs-target="#carousel-{{ forloop.counter }}" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" 
+                      data-bs-target="#carousel-{{ forloop.counter }}" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
             </div>
-
-            <!-- Previous & Next Buttons -->
-            <button
-              class="carousel-control-prev"
-              type="button"
-              data-bs-target="#slideshow"
-              data-bs-slide="prev"
-            >
-              <span
-                class="carousel-control-prev-icon"
-                aria-hidden="true"
-              ></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-
-            <button
-              class="carousel-control-next"
-              type="button"
-              data-bs-target="#slideshow"
-              data-bs-slide="next"
-            >
-              <span
-                class="carousel-control-next-icon"
-                aria-hidden="true"
-              ></span>
-              <span class="visually-hidden">Next</span>
-            </button>
           </div>
         </div>
       </div>
+      {% endfor %}
     </div>
-
+  </div>
+</div>
 
     <script>
         $(document).ready(function(){

@@ -123,11 +123,91 @@
   margin: auto; /* Center the slideshow */
 }
 
-#slideshow .carousel-inner img {
-  max-height: 1000px; /* Reduce height */
-  max-width: 100%; /* Maintain aspect ratio */
-  margin: auto; /* Center images */
-  object-fit: contain; /* Ensure images fit properly */
+
+/* ===== New Carousel Styles ===== */
+.carousel {
+  max-width: 80vw;
+  margin: 20px auto;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+.carousel-inner {
+  border-radius: 4px;
+  background: #f8f9fa;
+}
+
+.carousel-inner img {
+  max-width: 100%; /* Prevents stretching beyond natural width */
+  height: 500px; /* Keeps images uniform in height */
+  object-fit: contain; /* Ensures the whole image fits without cropping */
+  margin: auto; /* Centers the image if smaller than container */
+  display: block; /* Fixes spacing issues */
+}
+
+
+/* Indicator Dots */
+.carousel-indicators {
+  bottom: -35px;
+  margin-bottom: 0;
+}
+
+.carousel-indicators [data-bs-target] {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #666;
+  border: none;
+  margin: 0 5px;
+  transition: opacity 0.3s ease;
+}
+
+.carousel-indicators .active {
+  background-color: #333;
+  width: 12px;
+  height: 12px;
+}
+
+/* Navigation Arrows */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 6%;
+  opacity: 0.85;
+  transition: opacity 0.2s ease;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  opacity: 1;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(0.75);
+  width: 2rem;
+  height: 2rem;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .carousel-item img {
+    max-height: 50vh;
+    padding: 10px;
+  }
+  
+  .carousel-indicators {
+    bottom: -25px;
+  }
+  
+  .carousel-indicators [data-bs-target] {
+    width: 8px;
+    height: 8px;
+    margin: 0 4px;
+  }
+  
+  .carousel-indicators .active {
+    width: 10px;
+    height: 10px;
+  }
 }
 
 /* Responsive adjustments */
