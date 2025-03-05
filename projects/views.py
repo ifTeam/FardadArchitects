@@ -49,9 +49,8 @@ def projects_view(request):
     return render(request, "projects/projects.html", {"projects": projects})
 
 
-
 def project_detail_view(request, project_id):
-    """ Display a single project's details """
+    """ Display a single project's details with multiple galleries """
     project_dir = os.path.join(settings.BASE_DIR, "static", "images", "projects", project_id)
     info_path = os.path.join(project_dir, "info.txt")
 
@@ -69,20 +68,34 @@ def project_detail_view(request, project_id):
                 project_info["status"] = line.strip()
 
     # Check if images exist, fallback to main.jpg if not found
-    day_image_path = os.path.join(project_dir, "day.jpg")
-    night_image_path = os.path.join(project_dir, "night.jpg")
     main_image = f"images/projects/{project_id}/main.jpg"
-
-    day_image = main_image if not os.path.exists(day_image_path) else f"images/projects/{project_id}/day.jpg"
-    night_image = main_image if not os.path.exists(night_image_path) else f"images/projects/{project_id}/night.jpg"
+    day_image = main_image if not os.path.exists(os.path.join(project_dir, "day.jpg")) else f"images/projects/{project_id}/day.jpg"
+    night_image = main_image if not os.path.exists(os.path.join(project_dir, "night.jpg")) else f"images/projects/{project_id}/night.jpg"
 
     # Add the map.svg path
     map_svg = f"images/projects/{project_id}/map.svg"
 
-    # Get all images with numeric prefixes for the slideshow
-    image_files = sorted([
+    # Get main slideshow images (images in root folder)
+    main_slideshow = sorted([
         f for f in os.listdir(project_dir) if f.endswith((".jpg", ".png")) and f[:2].isdigit()
     ])
+
+    # Collect sub-gallery images
+    sub_galleries = {}
+    for folder in sorted(os.listdir(project_dir)):
+        subdir_path = os.path.join(project_dir, folder)
+        if os.path.isdir(subdir_path) and folder.lower().startswith("no"):  # Check if it's a sub-gallery
+            images = sorted([
+                f for f in os.listdir(subdir_path) if f.endswith((".jpg", ".png"))
+            ])
+            if images:
+                sub_galleries[folder] = [f"images/projects/{project_id}/{folder}/{img}" for img in images]
+
+    # Prepare slideshows data
+    slideshows = {
+        "Main Slideshow": [f"images/projects/{project_id}/{img}" for img in main_slideshow]
+    }
+    slideshows.update(sub_galleries)  # Add sub-gallery slideshows
 
     context = {
         "project": {
@@ -97,7 +110,7 @@ def project_detail_view(request, project_id):
             "day_image": day_image,
             "night_image": night_image,
             "map_svg": map_svg,
-            "slideshow_images": [f"images/projects/{project_id}/{img}" for img in image_files],
+            "slideshows": slideshows,
         }
     }
 

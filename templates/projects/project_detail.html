@@ -77,17 +77,34 @@
           <!-- Slideshow for Additional Images -->
           <div id="slideshow" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
-              {% for image in project.slideshow_images %}
-              <div
-                class="carousel-item {% if forloop.first %}active{% endif %}"
-              >
-                <img
-                  src="{% static image %}"
-                  class="d-block w-100"
-                  alt="Project Image"
-                />
+              {% for gallery, images in project.slideshows.items %}
+              <div class="row">
+                <h1>{{ gallery }}</h1>
+
+                <div class="box">
+                      <div id="slideshow-{{ forloop.counter }}" class="carousel slide" data-bs-ride="carousel">
+                          <div class="carousel-inner">
+                              {% for image in images %}
+                              <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                                  <img src="{% static image %}" class="d-block w-100" alt="Project Image">
+                              </div>
+                              {% endfor %}
+                          </div>
+      
+                          <button class="carousel-control-prev" type="button" data-bs-target="#slideshow-{{ forloop.counter }}" data-bs-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Previous</span>
+                          </button>
+      
+                          <button class="carousel-control-next" type="button" data-bs-target="#slideshow-{{ forloop.counter }}" data-bs-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Next</span>
+                          </button>
+                      </div>
+                  </div>
               </div>
               {% endfor %}
+         
             </div>
 
             <!-- Previous & Next Buttons -->
@@ -120,6 +137,8 @@
         </div>
       </div>
     </div>
+
+
     <script>
         $(document).ready(function(){
             function fadeEffect() {
