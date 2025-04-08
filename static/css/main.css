@@ -98,20 +98,25 @@ body {
 
 #main-menu a {
     display: block;
-    padding: 5% 0;
+    padding: 15% 0;
 	left:100px;
     text-decoration: none;
     color: black;
     border-bottom: none; /* Remove default underline */
 }
 
-#main-menu a:hover {
-    border-bottom: 3px solid black; /* Thin line under items on hover */
+#main-menu a:hover{
+    padding: 6px;
+    border-bottom: 1px solid black;
 }
 
+#main-menu a.active {
+    padding: 6px;
+    border-bottom: 1px solid black;
+}
 
 #brand-logo {
-    width: 100%;
+    width: 60%;
     text-align: center;
 }
 

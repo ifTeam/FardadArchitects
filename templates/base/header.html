@@ -1,28 +1,17 @@
 {% load static %}
 <header class="main-header">
-    <nav class="nav-container">
-        <div id="brand-logo">
-            <a href="/">
-                <img src="{% static 'images/logo.svg' %}" 
-                     alt="Fardad Architects"
-                     width="1080"
-                     height="309">
-            </a>
-        </div>
-        <div id="nav-menu">
-            <ul id="main-menu">
-                <li><a href="{% url 'projects' %}">Projects</a></li>
-                <li><a href="{% url 'contact' %}">Contact</a></li>
-                <li><a href="{% url 'about' %}">About</a></li>
-            </ul>
-
-            <!-- Mobile Menu Toggle -->
-            <!-- <div class="mobile-menu-toggle">
-                <span class="toggle-bar"></span>
-                <span class="toggle-bar"></span>
-                <span class="toggle-bar"></span>
-            </div> -->
-        </div>
-    </nav>
+  <nav class="nav-container">
+    <div id="brand-logo">
+      <a href="/">
+        <img src="{% static 'images/logo.svg' %}" alt="Fardad Architects" width="1080" height="309">
+      </a>
+    </div>
+    <div id="nav-menu">
+      <ul id="main-menu">
+        <li><a href="{% url 'projects' %}" {% if request.resolver_match.url_name == 'projects' %}class="active"{% endif %}>Projects</a></li>
+        <li><a href="{% url 'contact' %}" {% if request.resolver_match.url_name == 'contact' %}class="active"{% endif %}>Contact</a></li>
+        <li><a href="{% url 'about' %}" {% if request.resolver_match.url_name == 'about' %}class="active"{% endif %}>About</a></li>
+      </ul>
+    </div>
+  </nav>
 </header>
-
